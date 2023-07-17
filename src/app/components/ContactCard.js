@@ -1,9 +1,39 @@
+import contactStyle from '@/app/contact/contact.module.css'
+import Link from 'next/link';
+import { MdEmail, MdForum, MdVoiceChat } from "react-icons/md";
 
 
 const ContactCard = () => {
     return (
-        <div>
-            <h2>this is contact card</h2>
+        <div className={contactStyle.section}>
+           <div className={contactStyle.container}>
+           
+            <div className={contactStyle.grid}>
+                <div className={contactStyle.grid_card}>
+                <i> <MdEmail /> </i>
+                        <h2>Email</h2>
+                        <p>Monday to Friday Expected </p>
+                        <p className={contactStyle.last_para}>response time: 72 hours </p>
+                        <Link href="/">  Send Email <span>-&gt;</span></Link>
+                </div>
+                <div className={contactStyle.grid_card}>
+                <i> <MdVoiceChat /> </i>
+                        <h2>Live Chat</h2>
+                        <p>Weekdays: 9 AM — 6 PM ET</p>
+                        <p className={contactStyle.last_para}>Weekends: 9 AM — 5 PM ET </p>
+                        <Link href="/" >  Chat Now <span>-&gt;</span></Link>
+                </div>
+                <div className={contactStyle.grid_card}>
+                <i> <MdForum /> </i>
+                        <h2>Community Forum</h2>
+                        <p>Monday to Friday Expected </p>
+                        <p className={contactStyle.last_para}>response time: 72 hours </p>
+                        <Link href="/" className={contactStyle.anchorLink}>  Ask The Community <span>-&gt;</span></Link>
+                </div>
+
+            </div>
+
+           </div>
         </div>
     );
 };

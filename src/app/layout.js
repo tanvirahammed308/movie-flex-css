@@ -16,6 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    
     <html lang="en" className={mulish.className}>
       <body >
         <Header></Header>
